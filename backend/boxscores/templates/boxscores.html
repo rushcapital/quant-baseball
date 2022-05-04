@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title> box scores.</title>
+        <link rel="stylesheet" type = "text/css" href="{% static '/css/boxscores.css' %}">
+    </head>
+    
+    <body>
+
+        <div class="rushcapital"></div>
+        <!-- <div class="rush">
+            <span>
+                rush capital.
+            </span>        
+        </div> -->
+
+        <div class="sidenav">
+            <a>
+                box scores.
+            </a>        
+            <a>
+                probable lineups.
+            </a>
+            <a>
+                player ratings.
+            </a>
+            <a>
+                fair odds calculator.
+            </a>
+            <a>
+                daily mismatch.
+            </a>
+            <a>
+                auto-drafting.
+            </a>
+            <a>
+                parlay generator.
+            </a>
+        </div>
+
+        <div class="container">
+            <h1>light / dark.</h1>
+
+            <input type="checkbox" id="switch" name="mode">
+            <label for="switch">toggle.</label>
+        </div>
+
+        <div class="box"></div>
+
+        <script>
+            var checkbox = document.querySelector("input[name=mode]");
+
+            checkbox.addEventListener("change", function () {
+            if (this.checked) {
+                trans();
+                document.documentElement.setAttribute("data-theme", "dark");
+            } else {
+                trans();
+                document.documentElement.setAttribute("data-theme", "light");
+            }
+            });
+
+            let trans = () => {
+            document.documentElement.classList.add("transition");
+            window.setTimeout(() => {
+                document.documentElement.classList.remove("transition");
+            }, 2500);
+            };
+        </script>
+
+        <div class="footer">
+            <p><a href="https://www.youtube.com/watch?v=M1CEblYnqP4" target="_blank">bangers only.</a> | <a href="https://twitter.com/0xrush">twitter. </a> </>
+            </p>
+        </div>
+    </body>
+</html>
