@@ -1,3 +1,0 @@
-var serverVals = {
-    {playerId:"543037",batSide:"R",queryStrings:{"stats":"statcast-r-pitching-mlb"},slug:"gerrit-cole-543037",playerName:"GerritCole",playerType:"pitching",playerTeam:"",playerCurrentTeam:"147",playerPosition:"1",playerIsActive:"true",mostRecentSeason:"",activeSeason:"",rosterSearchSeason:"",seasonState:"",venueId:"3313",locale:"en",stats:{}
-};
