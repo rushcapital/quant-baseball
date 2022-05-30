@@ -71,7 +71,7 @@ def get_individual_box_scores(href):
             # remove pitchers and pinch hitters
             table_list = [player for player in table_list if player['position'] not in ['P','PH', 'Totals', '']]
             df = pd.DataFrame(table_list).set_index(['name'])
-            
+            print(df)
             df.to_pickle(f'{directory}/{team}.pkl')
 
             
@@ -103,7 +103,7 @@ def get_individual_box_scores(href):
             # # remove pitchers and pinch hitters
             table_list = [player for player in table_list if player['position'] not in ['Totals', '']]
             df = pd.DataFrame(table_list).set_index(['name'])
-
+            print(df)
             df.to_pickle(f'{directory}/{team}.pkl')
 
 def get_box_scores():
